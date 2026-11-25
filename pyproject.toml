@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flora-core"
+version = "0.1.0"
+description = "Standalone scene-conditioned Global–Local pouring core"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+
+[project.optional-dependencies]
+spacemouse = ["mujoco>=3.0", "hidapi>=0.14"]
+models = ["torch>=2.1"]
+local = ["torch>=2.1", "diffusers>=0.27"]
+simulation = ["mujoco>=3.0", "opencv-python-headless>=4.8"]
+robotics = ["mujoco>=3.0", "robosuite>=1.4,<1.6", "opencv-python-headless>=4.8"]
+particles = ["mujoco>=3.0", "taichi>=1.6"]
+training = ["torch>=2.1"]
+test = ["pytest>=7"]
+
+[project.scripts]
+flora-collect-spacemouse = "flora_core.demonstrations.spacemouse:main"
+flora-train-global = "flora_core.training.global_motion:main"
+flora-replay-demo = "flora_core.simulation.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

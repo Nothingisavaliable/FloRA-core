@@ -1,0 +1,597 @@
+{
+  "schema": "aext_cup_grasp_catalog_v1",
+  "conventions": {
+    "length_unit": "m",
+    "quaternion_order": "wxyz",
+    "transform": "T_cup_to_tcp maps TCP coordinates into the cup frame; world_T_tcp = world_T_cup @ T_cup_to_tcp",
+    "handle_geometry": "expressed in the LIBERO object main-body frame",
+    "profile_policy": "only status=validated is admitted by default"
+  },
+  "cups": {
+    "libero_mug": {
+      "asset_xml": "/home/wucheng/LIBERO/libero/libero/assets/custom_objects/libero_mug/libero_mug.xml",
+      "grasp_mode": "handle",
+      "handle": {
+        "status": "calibrated_geometry",
+        "center_cup_m": [
+          -0.056,
+          0.0,
+          0.0395
+        ],
+        "radial_direction_cup": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "method": "named_handle_body_origin",
+        "evidence": "/home/wucheng/LIBERO/libero/libero/assets/custom_objects/libero_mug/libero_mug.xml",
+        "collision_centroid_cup_m": [
+          -0.06223330670926517,
+          8.833331652220506e-12,
+          0.03939520766773163
+        ],
+        "collision_segment_count": 13,
+        "graspable_anchor_count": 13,
+        "calibration": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/handle_geometry/libero_mug/handle_points.json",
+        "visualization": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/handle_geometry/libero_mug/handle_points.png"
+      },
+      "tcp_profiles": {
+        "Panda": {
+          "status": "validated",
+          "gripper": "PandaGripper",
+          "T_cup_to_tcp": [
+            [
+              -4.081850420334376e-06,
+              0.9999485015869141,
+              0.01014899555593729,
+              -0.06277251243591309
+            ],
+            [
+              1.0,
+              4.060026640217984e-06,
+              2.1709427073801635e-06,
+              -5.245066176939872e-07
+            ],
+            [
+              2.129625727320672e-06,
+              0.01014899555593729,
+              -0.9999485015869141,
+              0.05779753625392914
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/libero_mug/panda/fixed_grasp_ik.npz",
+          "validation": "real_mujoco_finger_contact_lift_and_follow_no_weld",
+          "ik_seed_profile": "/home/wucheng/AEXT/outputs/grasp_candidate_selection/handle_geometry_grasp_candidates/scene_00000/roll_0_handle_geom_06/ik_grasp/scene_00000_handle_grasp_robot_trial_ik.npz"
+        },
+        "UR5e": {
+          "status": "validated",
+          "gripper": "Robotiq85Gripper",
+          "T_cup_to_tcp": [
+            [
+              0.048846159130334854,
+              0.967640221118927,
+              0.24756097793579102,
+              -0.05616254359483719
+            ],
+            [
+              0.998396635055542,
+              -0.04020421952009201,
+              -0.039847228676080704,
+              0.0020382532384246588
+            ],
+            [
+              -0.028604784980416298,
+              0.24911043047904968,
+              -0.9680525660514832,
+              0.0399627611041069
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/libero_mug/ur5e/fixed_grasp_ik.npz",
+          "validation": "real_mujoco_finger_contact_lift_and_follow_no_weld"
+        },
+        "Sawyer": {
+          "status": "validated",
+          "gripper": "RethinkGripper",
+          "T_cup_to_tcp": [
+            [
+              -0.00516502745449543,
+              -0.9932366013526917,
+              0.11599316447973251,
+              -0.08003703504800797
+            ],
+            [
+              -0.9999846816062927,
+              0.004900296684354544,
+              -0.002567345043644309,
+              3.391145583009347e-05
+            ],
+            [
+              0.0019815799314528704,
+              -0.11600465327501297,
+              -0.9932466745376587,
+              0.05366605892777443
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/libero_mug/sawyer_downward_rotated90_final/fixed_grasp_ik.npz",
+          "validation": "real_mujoco_finger_contact_lift_and_follow_no_weld_collision_audited",
+          "gripper_geometry": {
+            "rethink_fingertip_collision_half_width_m": 0.0055,
+            "rethink_extra_finger_closure_m": 0.003
+          },
+          "candidate_source": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/downward_tcp_candidates/libero_mug/tcp_pose_candidates.json",
+          "calibration_search": {
+            "tcp_z_clearance_variants_m": [
+              0.0
+            ],
+            "tcp_yaw_variants_deg": [
+              0.0
+            ],
+            "tcp_pitch_variants_deg": [
+              0.0
+            ],
+            "tcp_tilt_variants_deg": [
+              0.0
+            ],
+            "tcp_centerline_point_indices": [
+              6
+            ],
+            "tcp_radial_offset_variants_m": [
+              0.0
+            ],
+            "tcp_closing_offset_variants_m": [
+              0.001
+            ]
+          }
+        }
+      }
+    },
+    "slim_cup": {
+      "asset_xml": "/home/wucheng/LIBERO/libero/libero/assets/custom_objects/slim_cup/slim_cup.xml",
+      "grasp_mode": "body",
+      "handle": null,
+      "body_grasp": {
+        "status": "asset_geometry",
+        "centerline_point_cup_m": [0.0, 0.0, 0.065],
+        "side_direction_cup": [-1.0, 0.0, 0.0],
+        "method": "opposing_wall_pinch_opposite_pouring_arc",
+        "rq3_profile_config": "/home/wucheng/AEXT/configs/rq3_g2_opposite_outlet_grasp_v1.json"
+      },
+      "tcp_profiles": {
+        "Panda": {
+          "status": "validated",
+          "gripper": "PandaGripper",
+          "T_cup_to_tcp": [
+            [1.0, -0.00024242768995463848, -0.0000018101127352565527, 0.000645951135084033],
+            [-0.0000015665525552321924, 0.001004667836241424, -0.9999995231628418, 0.000186018631211482],
+            [0.0002424293925287202, 0.999999463558197, 0.0010046673705801368, 0.06531854718923569],
+            [0.0, 0.0, 0.0, 1.0]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/rq3_g2_opposite_outlet_grasp_v1/Panda_d0215_workspace/fixed_grasp_ik.npz",
+          "validation": "opposite_pouring_arc_real_mujoco_contact_lift_and_rq3_approach_admitted_no_weld"
+        },
+        "UR5e": {
+          "status": "validated",
+          "gripper": "Robotiq85Gripper",
+          "T_cup_to_tcp": [
+            [0.9997884035110474, -0.00042115343967452645, 0.02056756056845188, -0.0005382654489949346],
+            [0.020571783185005188, 0.01751752384006977, -0.9996349215507507, 0.013786327093839645],
+            [0.000060706937802024186, 0.9998464584350586, 0.017522480338811874, 0.06511303037405014],
+            [0.0, 0.0, 0.0, 1.0]
+          ],
+          "evidence": "outputs/rq3_g2_opposite_outlet_grasp_v1/UR5e/fixed_grasp_ik.npz",
+          "validation": "opposite_pouring_arc_real_mujoco_contact_lift_and_rq3_approach_admitted_no_weld"
+        },
+        "Sawyer": {
+          "status": "validated",
+          "gripper": "RethinkGripper",
+          "T_cup_to_tcp": [
+            [1.0, -0.000015242273548210505, -0.00017272138211410493, 0.000038709335058229044],
+            [-0.000172721323906444, 0.000004307965809857706, -1.0, 0.00021951273083686829],
+            [0.000015243017514876556, 1.0, 0.000004305333277443424, 0.06519247591495514],
+            [0.0, 0.0, 0.0, 1.0]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/rq3_g2_opposite_outlet_grasp_v1/Sawyer/fixed_grasp_ik.npz",
+          "validation": "opposite_pouring_arc_real_mujoco_contact_lift_and_rq3_approach_admitted_no_weld"
+        }
+      }
+    },
+    "porcelain_mug": {
+      "asset_xml": "/home/wucheng/LIBERO/libero/libero/assets/turbosquid_objects/porcelain_mug/porcelain_mug.xml",
+      "grasp_mode": "handle",
+      "handle": {
+        "status": "calibrated_geometry",
+        "center_cup_m": [
+          -0.0491367,
+          0.0,
+          0.05602
+        ],
+        "radial_direction_cup": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "method": "manual_collision_box_cluster_v1",
+        "evidence": "/home/wucheng/LIBERO/libero/libero/assets/turbosquid_objects/porcelain_mug/porcelain_mug.xml",
+        "collision_centroid_cup_m": [
+          -0.04913666666666667,
+          0.0,
+          0.05601999999999999
+        ],
+        "collision_segment_count": 3,
+        "graspable_anchor_count": 11,
+        "calibration": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/handle_geometry/porcelain_mug/handle_points.json",
+        "visualization": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/handle_geometry/porcelain_mug/handle_points.png"
+      },
+      "tcp_profiles": {
+        "Panda": {
+          "status": "validated",
+          "gripper": "PandaGripper",
+          "T_cup_to_tcp": [
+            [
+              -6.025767288520001e-05,
+              -0.9999751448631287,
+              0.007048905827105045,
+              -0.05934260040521622
+            ],
+            [
+              -1.0,
+              5.9525362303247675e-05,
+              -0.00010409962123958394,
+              4.016057175704191e-07
+            ],
+            [
+              0.00010367744107497856,
+              -0.00704891188070178,
+              -0.9999751448631287,
+              0.0716254860162735
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/porcelain_mug/panda/fixed_grasp_ik.npz",
+          "validation": "real_mujoco_finger_contact_lift_and_follow_no_weld"
+        },
+        "UR5e": {
+          "status": "validated",
+          "gripper": "Robotiq85Gripper",
+          "T_cup_to_tcp": [
+            [
+              0.0013722984585911036,
+              -0.9993839263916016,
+              -0.0350690595805645,
+              -0.06094156205654144
+            ],
+            [
+              -0.9992455244064331,
+              -9.250908988178708e-06,
+              -0.038838163018226624,
+              -0.002300906227901578
+            ],
+            [
+              0.038813915103673935,
+              0.03509589657187462,
+              -0.9986299276351929,
+              0.03603499010205269
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/collision_free_profiles/porcelain_mug/ur5e/fixed_grasp_ik.npz",
+          "validation": "real_mujoco_finger_contact_lift_and_follow_no_weld_collision_audited"
+        },
+        "Sawyer": {
+          "status": "validated",
+          "gripper": "RethinkGripper",
+          "T_cup_to_tcp": [
+            [
+              -4.6086570364423096e-05,
+              -0.9999787211418152,
+              0.0065234871581196785,
+              -0.059075817465782166
+            ],
+            [
+              -1.0,
+              4.5169672375777736e-05,
+              -0.00014070073666516691,
+              -1.4140107396087842e-06
+            ],
+            [
+              0.0001404030917910859,
+              -0.0065234932117164135,
+              -0.9999787211418152,
+              0.07122749090194702
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/porcelain_mug/sawyer/fixed_grasp_ik.npz",
+          "validation": "real_mujoco_finger_contact_lift_and_follow_no_weld"
+        }
+      }
+    },
+    "red_coffee_mug": {
+      "asset_xml": "/home/wucheng/LIBERO/libero/libero/assets/turbosquid_objects/red_coffee_mug/red_coffee_mug.xml",
+      "grasp_mode": "handle",
+      "handle": {
+        "status": "calibrated_geometry",
+        "centerline_method": "mesh_medial_axis",
+        "center_cup_m": [
+          0.0420533,
+          0.00109,
+          0.08546
+        ],
+        "radial_direction_cup": [
+          0.999664,
+          0.025918,
+          0.0
+        ],
+        "method": "collision_box_cluster_v1",
+        "evidence": "/home/wucheng/AEXT/outputs/handled_cup_grasp_profiles/red_coffee_mug_refined/grasp_validation_report.json",
+        "collision_centroid_cup_m": [
+          0.04070118465301399,
+          0.0010899999999999799,
+          0.07535806788451896
+        ],
+        "collision_segment_count": 3,
+        "graspable_anchor_count": 8,
+        "calibration": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/handle_geometry/red_coffee_mug/handle_points.json",
+        "visualization": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/handle_geometry/red_coffee_mug/handle_points.png"
+      },
+      "tcp_profiles": {
+        "Panda": {
+          "status": "validated",
+          "gripper": "PandaGripper",
+          "T_cup_to_tcp": [
+            [
+              -0.0001306570484302938,
+              0.9999925494194031,
+              -0.0038580072578042746,
+              0.05436640605330467
+            ],
+            [
+              1.0,
+              0.000129939173348248,
+              -0.00018632510909810662,
+              0.0010906116804108024
+            ],
+            [
+              -0.0001858224131865427,
+              -0.0038580314721912146,
+              -0.9999925494194031,
+              0.10404310375452042
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/red_coffee_mug/panda/fixed_grasp_ik.npz",
+          "validation": "real_mujoco_finger_contact_lift_and_follow_no_weld"
+        },
+        "UR5e": {
+          "status": "validated",
+          "gripper": "Robotiq85Gripper",
+          "T_cup_to_tcp": [
+            [
+              0.001041029579937458,
+              0.9992181062698364,
+              0.039523229002952576,
+              0.050533778965473175
+            ],
+            [
+              0.9996565580368042,
+              -4.945338787365472e-06,
+              -0.02620561607182026,
+              -0.000922558712773025
+            ],
+            [
+              -0.0261849295347929,
+              0.039536938071250916,
+              -0.9988749623298645,
+              0.06320161372423172
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/collision_free_profiles/red_coffee_mug/ur5e/fixed_grasp_ik.npz",
+          "validation": "real_mujoco_finger_contact_lift_and_follow_no_weld_collision_audited"
+        },
+        "Sawyer": {
+          "status": "validated",
+          "gripper": "RethinkGripper",
+          "T_cup_to_tcp": [
+            [
+              -0.002552208723500371,
+              0.9999810457229614,
+              -0.005600377451628447,
+              0.055403001606464386
+            ],
+            [
+              0.9999964237213135,
+              0.0025564415846019983,
+              0.0007487918483093381,
+              0.001084993127733469
+            ],
+            [
+              0.0007630946929566562,
+              -0.005598446819931269,
+              -0.9999840259552002,
+              0.07601568847894669
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "evidence": "outputs/three_arm_experiment/cup_grasps/red_coffee_mug/sawyer/fixed_grasp_ik.npz",
+          "validation": "real_mujoco_finger_contact_lift_and_follow_no_weld"
+        }
+      }
+    },
+    "white_yellow_mug": {
+      "asset_xml": "/home/wucheng/LIBERO/libero/libero/assets/turbosquid_objects/white_yellow_mug/white_yellow_mug.xml",
+      "grasp_mode": "handle",
+      "handle": {
+        "status": "calibrated_geometry",
+        "centerline_method": "mesh_medial_axis",
+        "center_cup_m": [
+          0.05023,
+          0.0,
+          0.0539733
+        ],
+        "radial_direction_cup": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "method": "manual_collision_box_cluster_v1",
+        "evidence": "/home/wucheng/LIBERO/libero/libero/assets/turbosquid_objects/white_yellow_mug/white_yellow_mug.xml",
+        "collision_centroid_cup_m": [
+          0.05117159765512447,
+          0.0,
+          0.05296141836443937
+        ],
+        "collision_segment_count": 3,
+        "graspable_anchor_count": 8,
+        "calibration": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/handle_geometry/white_yellow_mug/handle_points.json",
+        "visualization": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/handle_geometry/white_yellow_mug/handle_points.png"
+      },
+      "tcp_profiles": {
+        "Panda": {
+          "status": "validated",
+          "gripper": "PandaGripper",
+          "T_cup_to_tcp": [
+            [
+              2.1030214156780858e-06,
+              0.9999933242797852,
+              -0.003649582387879491,
+              0.06273847818374634
+            ],
+            [
+              1.0,
+              -2.045647079285118e-06,
+              1.5724519471405074e-05,
+              2.7674849434333737e-07
+            ],
+            [
+              1.5716948837507516e-05,
+              -0.003649582387879491,
+              -0.9999933242797852,
+              0.07353459298610687
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/white_yellow_mug/panda/fixed_grasp_ik.npz",
+          "validation": "real_mujoco_finger_contact_lift_and_follow_no_weld"
+        },
+        "UR5e": {
+          "status": "validated",
+          "gripper": "Robotiq85Gripper",
+          "T_cup_to_tcp": [
+            [
+              0.00021366958389990032,
+              0.9963276386260986,
+              -0.08562210947275162,
+              0.042735349386930466
+            ],
+            [
+              0.9998880624771118,
+              -0.0014939295360818505,
+              -0.014888649806380272,
+              -5.292510468279943e-05
+            ],
+            [
+              -0.014961887151002884,
+              -0.08560934662818909,
+              -0.9962164163589478,
+              0.07981937378644943
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/white_yellow_mug/ur5e/fixed_grasp_ik.npz",
+          "validation": "real_mujoco_finger_contact_lift_and_follow_no_weld"
+        },
+        "Sawyer": {
+          "status": "validated",
+          "gripper": "RethinkGripper",
+          "T_cup_to_tcp": [
+            [
+              -5.4264833124761935e-06,
+              0.9999802708625793,
+              -0.006285402458161116,
+              0.03961324319243431
+            ],
+            [
+              1.0,
+              6.750359716534149e-06,
+              0.0002106059400830418,
+              -1.3497236750481534e-06
+            ],
+            [
+              0.0002106442116200924,
+              -0.006285401061177254,
+              -0.9999802112579346,
+              0.08048263192176819
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "evidence": "/home/wucheng/AEXT/outputs/three_arm_experiment/cup_grasps/white_yellow_mug/sawyer/fixed_grasp_ik.npz",
+          "validation": "real_mujoco_finger_contact_lift_and_follow_no_weld"
+        }
+      }
+    }
+  }
+}

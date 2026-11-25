@@ -1,0 +1,285 @@
+{
+  "schema": "scene_realization_collection_v2_independent_geometry",
+  "default_scene_id": "S_nominal_O1_G1",
+  "default_realization_id": "M_left_mid",
+  "liquid_task_protocol": {
+    "initial_volume_rule": "target_capacity_ratio",
+    "target_fill_ratio": 0.6,
+    "minimum_transfer_ratio": 0.8,
+    "maximum_spill_ratio": 0.1,
+    "particle_count": 300,
+    "metric_denominator": "initial_source_liquid"
+  },
+  "assets": {
+    "G1_wide_flared": {
+      "status": "selected_verified_parameterized_guidance",
+      "source_xml": "/home/wucheng/LIBERO/notebooks/custom_assets/libero_mug/libero_mug.xml",
+      "target_xml": "/home/wucheng/LIBERO/libero/libero/assets/stable_scanned_objects/akita_black_bowl/akita_black_bowl.xml",
+      "affordance_cache": "cross_scene_affordance_g1.json",
+      "openad_inference": {
+        "yaw_ensemble_steps": 8,
+        "min_response": 0.7
+      },
+      "source_scale_xyz": [1.0, 1.0, 1.0],
+      "target_scale_xyz": [1.15, 1.15, 0.85],
+      "source_liquid_cavity": {
+        "center_local_m": [0.0, 0.0, 0.0],
+        "inner_radius_m": 0.040239,
+        "bottom_z_m": 0.008032,
+        "fill_top_z_m": 0.0635,
+        "lip_z_m": 0.069581
+      },
+      "target_liquid_cavity": {
+        "inner_radius_m": 0.053724,
+        "bottom_radius_m": 0.038347,
+        "lip_radius_m": 0.056424,
+        "floor_z_m": 0.008010,
+        "lip_z_m": 0.040299,
+        "opening_lip_z_m": 0.044372,
+        "opening_radius_m": 0.063287
+      },
+      "source_nominal_quat_wxyz": [0.70710678, 0.0, 0.0, 0.70710678]
+    },
+    "G2_small_shallow": {
+      "status": "selected_verified_parameterized_guidance",
+      "source_xml": "/home/wucheng/LIBERO/libero/libero/assets/custom_objects/slim_cup/slim_cup.xml",
+      "target_xml": "/home/wucheng/LIBERO/libero/libero/assets/stable_scanned_objects/red_bowl/red_bowl.xml",
+      "affordance_cache": "cross_scene_affordance_g2.json",
+      "openad_inference": {
+        "yaw_ensemble_steps": 1,
+        "min_response": 0.7
+      },
+      "source_scale_xyz": [1.0, 1.0, 1.0],
+      "target_scale_xyz": [0.90, 0.90, 0.80],
+      "source_liquid_cavity": {
+        "center_local_m": [0.0, 0.0, 0.0],
+        "inner_radius_m": 0.025,
+        "bottom_z_m": 0.008,
+        "fill_top_z_m": 0.066,
+        "lip_z_m": 0.098
+      },
+      "target_liquid_cavity": {
+        "inner_radius_m": 0.033210,
+        "bottom_radius_m": 0.025540,
+        "lip_radius_m": 0.033654,
+        "floor_z_m": 0.003387,
+        "lip_z_m": 0.024714,
+        "opening_lip_z_m": 0.028077,
+        "opening_radius_m": 0.036614
+      },
+      "source_nominal_quat_wxyz": [0.70710678, 0.0, 0.0, 0.70710678]
+    },
+    "G3_deep_vertical": {
+      "status": "selected_verified_parameterized_guidance",
+      "source_xml": "/home/wucheng/LIBERO/libero/libero/assets/turbosquid_objects/red_coffee_mug/red_coffee_mug.xml",
+      "target_xml": "/home/wucheng/LIBERO/libero/libero/assets/stable_scanned_objects/glazed_rim_porcelain_ramekin/glazed_rim_porcelain_ramekin.xml",
+      "affordance_cache": "cross_scene_affordance_g3.json",
+      "openad_inference": {
+        "yaw_ensemble_steps": 1,
+        "min_response": 0.7
+      },
+      "source_scale_xyz": [1.0, 1.0, 1.0],
+      "target_scale_xyz": [1.05, 1.05, 1.35],
+      "source_liquid_cavity": {
+        "center_local_m": [-0.018, -0.003, 0.0],
+        "inner_radius_m": 0.038,
+        "bottom_z_m": 0.009663,
+        "fill_top_z_m": 0.066,
+        "lip_z_m": 0.131
+      },
+      "target_liquid_cavity": {
+        "inner_radius_m": 0.040447,
+        "bottom_radius_m": 0.031653,
+        "lip_radius_m": 0.041863,
+        "floor_z_m": 0.004997,
+        "lip_z_m": 0.055482,
+        "opening_lip_z_m": 0.058308,
+        "opening_radius_m": 0.045145
+      },
+      "source_nominal_quat_wxyz": [0.70710678, 0.0, 0.0, -0.70710678]
+    },
+    "G3_white_yellow_source": {
+      "status": "selected_verified_geometry_replacement_v1",
+      "source_xml": "/home/wucheng/LIBERO/libero/libero/assets/turbosquid_objects/white_yellow_mug/white_yellow_mug.xml",
+      "target_xml": "/home/wucheng/LIBERO/libero/libero/assets/stable_scanned_objects/glazed_rim_porcelain_ramekin/glazed_rim_porcelain_ramekin.xml",
+      "affordance_cache": "cross_scene_affordance_g3_white_yellow.json",
+      "openad_inference": {
+        "yaw_ensemble_steps": 1,
+        "min_response": 0.7
+      },
+      "source_scale_xyz": [1.0, 1.0, 1.0],
+      "target_scale_xyz": [1.05, 1.05, 1.35],
+      "source_liquid_cavity": {
+        "center_local_m": [-0.018, -0.001, 0.0],
+        "inner_radius_m": 0.032,
+        "bottom_z_m": 0.010,
+        "fill_top_z_m": 0.086,
+        "lip_z_m": 0.100
+      },
+      "target_liquid_cavity": {
+        "inner_radius_m": 0.040447,
+        "bottom_radius_m": 0.031653,
+        "lip_radius_m": 0.041863,
+        "floor_z_m": 0.004997,
+        "lip_z_m": 0.055482,
+        "opening_lip_z_m": 0.058308,
+        "opening_radius_m": 0.045145
+      },
+      "source_nominal_quat_wxyz": [0.70710678, 0.0, 0.0, -0.70710678]
+    }
+  },
+  "source_geometries": {
+    "G_o1": {"asset_id": "G1_wide_flared"},
+    "G_o2": {"asset_id": "G2_small_shallow"},
+    "G_o3": {"asset_id": "G3_deep_vertical"}
+  },
+  "target_geometries": {
+    "G_g1": {"asset_id": "G1_wide_flared"},
+    "G_g2": {"asset_id": "G2_small_shallow"},
+    "G_g3": {"asset_id": "G3_deep_vertical"}
+  },
+  "obstacle_layouts": {
+    "O1": {
+      "description": "fixed-center compact-footprint box",
+      "valid_topologies": ["c_left", "c_right", "c_over"],
+      "obstacles": [{
+        "obstacle_id": "obstacle_0",
+        "x_task_m": -0.18,
+        "y_task_m": 0.0,
+        "size_m": [0.10, 0.04, 0.10],
+        "rgba": [0.55, 0.18, 0.12, 1.0]
+      }]
+    },
+    "O2": {
+      "description": "fixed-center medium-width box",
+      "valid_topologies": ["c_left", "c_right", "c_over"],
+      "obstacles": [{
+        "obstacle_id": "obstacle_0",
+        "x_task_m": -0.18,
+        "y_task_m": 0.0,
+        "size_m": [0.14, 0.04, 0.10],
+        "rgba": [0.48, 0.14, 0.10, 1.0]
+      }]
+    },
+    "O3": {
+      "description": "fixed-center laterally-wide box",
+      "valid_topologies": ["c_left", "c_right", "c_over"],
+      "obstacles": [{
+        "obstacle_id": "obstacle_0",
+        "x_task_m": -0.18,
+        "y_task_m": 0.0,
+        "size_m": [0.18, 0.04, 0.10],
+        "rgba": [0.52, 0.16, 0.10, 1.0]
+      }]
+    }
+  },
+  "scenes": [
+    {
+      "scene_id": "S_nominal_O1_G1",
+      "distance_level": "medium",
+      "distance_m": 0.36,
+      "orientation_level": "zero",
+      "orientation_deg": 0.0,
+      "obstacle_layout_id": "O1",
+      "geometry_id": "G1_wide_flared"
+    },
+    {
+      "scene_id": "S_near_neg_O2_G1",
+      "distance_level": "near",
+      "distance_m": 0.30,
+      "orientation_level": "negative",
+      "orientation_deg": -30.0,
+      "obstacle_layout_id": "O2",
+      "geometry_id": "G1_wide_flared"
+    },
+    {
+      "scene_id": "S_far_pos_O3_G1",
+      "distance_level": "far",
+      "distance_m": 0.42,
+      "orientation_level": "positive",
+      "orientation_deg": 30.0,
+      "obstacle_layout_id": "O3",
+      "geometry_id": "G1_wide_flared"
+    },
+    {
+      "scene_id": "S_nominal_O1_G2",
+      "distance_level": "medium",
+      "distance_m": 0.36,
+      "orientation_level": "zero",
+      "orientation_deg": 0.0,
+      "obstacle_layout_id": "O1",
+      "geometry_id": "G2_small_shallow"
+    },
+    {
+      "scene_id": "S_near_neg_O2_G2",
+      "distance_level": "near",
+      "distance_m": 0.30,
+      "orientation_level": "negative",
+      "orientation_deg": -30.0,
+      "obstacle_layout_id": "O2",
+      "geometry_id": "G2_small_shallow"
+    },
+    {
+      "scene_id": "S_far_pos_O3_G2",
+      "distance_level": "far",
+      "distance_m": 0.42,
+      "orientation_level": "positive",
+      "orientation_deg": 30.0,
+      "obstacle_layout_id": "O3",
+      "geometry_id": "G2_small_shallow"
+    },
+    {
+      "scene_id": "S_nominal_O1_G3",
+      "distance_level": "medium",
+      "distance_m": 0.36,
+      "orientation_level": "zero",
+      "orientation_deg": 0.0,
+      "obstacle_layout_id": "O1",
+      "geometry_id": "G3_deep_vertical"
+    },
+    {
+      "scene_id": "S_near_neg_O2_G3",
+      "distance_level": "near",
+      "distance_m": 0.30,
+      "orientation_level": "negative",
+      "orientation_deg": -30.0,
+      "obstacle_layout_id": "O2",
+      "geometry_id": "G3_deep_vertical"
+    },
+    {
+      "scene_id": "S_far_pos_O3_G3",
+      "distance_level": "far",
+      "distance_m": 0.42,
+      "orientation_level": "positive",
+      "orientation_deg": 30.0,
+      "obstacle_layout_id": "O3",
+      "geometry_id": "G3_deep_vertical"
+    }
+  ],
+  "realizations": [
+    {
+      "realization_id": "M_left_mid",
+      "u_o": 0.5,
+      "u_g_level": "sector_0",
+      "u_g": 0.0,
+      "topology_class": "c_left",
+      "anchor_height_m": 0.07
+    },
+    {
+      "realization_id": "M_right_mid",
+      "u_o": 0.5,
+      "u_g_level": "sector_120",
+      "u_g": 0.3333333333333333,
+      "topology_class": "c_right",
+      "anchor_height_m": 0.07
+    },
+    {
+      "realization_id": "M_over_mid",
+      "u_o": 0.5,
+      "u_g_level": "sector_240",
+      "u_g": 0.6666666666666666,
+      "topology_class": "c_over",
+      "anchor_height_m": 0.08
+    }
+  ]
+}

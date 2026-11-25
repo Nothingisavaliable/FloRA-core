@@ -1,0 +1,2095 @@
+{
+  "schema": "scene_realization_fixed_budget_design_v1",
+  "method": "fixed_budget_pairwise_balanced",
+  "method_role": "baseline",
+  "sampling": {
+    "budget_configurations": 81,
+    "seed": 3407,
+    "without_replacement": true,
+    "pairwise_objective": "full_coverage_then_balanced_repeated_multiplicity",
+    "higher_order_groups": [],
+    "higher_order_weight": 0,
+    "demonstrations_per_configuration": "set_by_collector"
+  },
+  "factor_order": [
+    "d",
+    "psi",
+    "O",
+    "G_o",
+    "G_g",
+    "u_o",
+    "u_g",
+    "c"
+  ],
+  "scene_factors": [
+    "d",
+    "psi",
+    "O",
+    "G_o",
+    "G_g"
+  ],
+  "realization_factors": [
+    "u_o",
+    "u_g",
+    "c"
+  ],
+  "factor_levels": {
+    "d": [
+      {
+        "id": "near",
+        "distance_m": 0.3
+      },
+      {
+        "id": "medium",
+        "distance_m": 0.36
+      },
+      {
+        "id": "far",
+        "distance_m": 0.42
+      }
+    ],
+    "psi": [
+      {
+        "id": "negative",
+        "orientation_deg": -30
+      },
+      {
+        "id": "zero",
+        "orientation_deg": 0
+      },
+      {
+        "id": "positive",
+        "orientation_deg": 30
+      }
+    ],
+    "O": [
+      {
+        "id": "O1"
+      },
+      {
+        "id": "O2"
+      },
+      {
+        "id": "O3"
+      }
+    ],
+    "G_o": [
+      {
+        "id": "G_o1"
+      },
+      {
+        "id": "G_o2"
+      },
+      {
+        "id": "G_o3"
+      }
+    ],
+    "G_g": [
+      {
+        "id": "G_g1"
+      },
+      {
+        "id": "G_g2"
+      },
+      {
+        "id": "G_g3"
+      }
+    ],
+    "u_o": [
+      {
+        "id": "uo25",
+        "value": 0.25
+      },
+      {
+        "id": "uo50",
+        "value": 0.5
+      },
+      {
+        "id": "uo75",
+        "value": 0.75
+      }
+    ],
+    "u_g": [
+      {
+        "id": "sector_0",
+        "value": 0
+      },
+      {
+        "id": "sector_120",
+        "value": 0.3333333333333333
+      },
+      {
+        "id": "sector_240",
+        "value": 0.6666666666666666
+      }
+    ],
+    "c": [
+      {
+        "id": "c_left"
+      },
+      {
+        "id": "c_right"
+      },
+      {
+        "id": "c_over"
+      }
+    ]
+  },
+  "coverage_statistics": {
+    "overall_pairwise": {
+      "requirement_count": 252,
+      "covered_requirement_count": 252,
+      "coverage_ratio": 1,
+      "minimum_multiplicity": 8,
+      "maximum_multiplicity": 11,
+      "mean_multiplicity": 9,
+      "multiplicity_histogram": {
+        "8": 38,
+        "9": 177,
+        "10": 36,
+        "11": 1
+      }
+    },
+    "factor_level_balance": {
+      "d": {
+        "near": 27,
+        "medium": 27,
+        "far": 27
+      },
+      "psi": {
+        "negative": 27,
+        "zero": 27,
+        "positive": 27
+      },
+      "O": {
+        "O1": 27,
+        "O2": 27,
+        "O3": 27
+      },
+      "G_o": {
+        "G_o1": 27,
+        "G_o2": 27,
+        "G_o3": 27
+      },
+      "G_g": {
+        "G_g1": 27,
+        "G_g2": 27,
+        "G_g3": 27
+      },
+      "u_o": {
+        "uo25": 28,
+        "uo50": 26,
+        "uo75": 27
+      },
+      "u_g": {
+        "sector_0": 27,
+        "sector_120": 27,
+        "sector_240": 27
+      },
+      "c": {
+        "c_left": 27,
+        "c_right": 27,
+        "c_over": 27
+      }
+    },
+    "pairwise_breakdown": {
+      "scene_scene": {
+        "factor_pair_count": 10,
+        "requirement_count": 90,
+        "covered_requirement_count": 90,
+        "coverage_ratio": 1,
+        "minimum_multiplicity": 8,
+        "maximum_multiplicity": 11,
+        "mean_multiplicity": 9
+      },
+      "scene_realization": {
+        "factor_pair_count": 15,
+        "requirement_count": 135,
+        "covered_requirement_count": 135,
+        "coverage_ratio": 1,
+        "minimum_multiplicity": 8,
+        "maximum_multiplicity": 10,
+        "mean_multiplicity": 9
+      },
+      "realization_realization": {
+        "factor_pair_count": 3,
+        "requirement_count": 27,
+        "covered_requirement_count": 27,
+        "coverage_ratio": 1,
+        "minimum_multiplicity": 8,
+        "maximum_multiplicity": 10,
+        "mean_multiplicity": 9
+      }
+    }
+  },
+  "statistics": {
+    "full_cartesian_rows": 6561,
+    "selected_collection_rows": 81,
+    "selected_fraction_of_full": 0.012345679012345678
+  },
+  "collection_rows": [
+    {
+      "collection_row_id": "PB_001",
+      "scene_id": "S_far_positive_O2_G_o2_G_g2",
+      "realization_id": "M_uo25_sector_0_left",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_002",
+      "scene_id": "S_near_zero_O3_G_o1_G_g3",
+      "realization_id": "M_uo75_sector_120_right",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_003",
+      "scene_id": "S_medium_negative_O1_G_o3_G_g1",
+      "realization_id": "M_uo50_sector_240_over",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_004",
+      "scene_id": "S_near_negative_O2_G_o1_G_g1",
+      "realization_id": "M_uo50_sector_0_left",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_005",
+      "scene_id": "S_medium_positive_O1_G_o2_G_g2",
+      "realization_id": "M_uo75_sector_120_right",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_006",
+      "scene_id": "S_far_zero_O3_G_o3_G_g3",
+      "realization_id": "M_uo25_sector_240_over",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_007",
+      "scene_id": "S_far_negative_O3_G_o2_G_g1",
+      "realization_id": "M_uo50_sector_120_right",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_008",
+      "scene_id": "S_near_positive_O2_G_o3_G_g2",
+      "realization_id": "M_uo75_sector_240_over",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_009",
+      "scene_id": "S_medium_zero_O1_G_o1_G_g3",
+      "realization_id": "M_uo25_sector_0_left",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_010",
+      "scene_id": "S_medium_negative_O3_G_o3_G_g2",
+      "realization_id": "M_uo75_sector_0_left",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_011",
+      "scene_id": "S_medium_zero_O2_G_o2_G_g3",
+      "realization_id": "M_uo50_sector_240_right",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_012",
+      "scene_id": "S_far_positive_O1_G_o1_G_g1",
+      "realization_id": "M_uo25_sector_120_over",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_013",
+      "scene_id": "S_near_negative_O2_G_o3_G_g3",
+      "realization_id": "M_uo25_sector_120_right",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_014",
+      "scene_id": "S_near_zero_O1_G_o2_G_g1",
+      "realization_id": "M_uo75_sector_0_over",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_015",
+      "scene_id": "S_near_positive_O3_G_o1_G_g2",
+      "realization_id": "M_uo50_sector_240_left",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_016",
+      "scene_id": "S_far_positive_O1_G_o3_G_g3",
+      "realization_id": "M_uo75_sector_0_right",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_017",
+      "scene_id": "S_far_zero_O2_G_o3_G_g2",
+      "realization_id": "M_uo50_sector_120_left",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_018",
+      "scene_id": "S_far_negative_O1_G_o1_G_g2",
+      "realization_id": "M_uo25_sector_240_right",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_019",
+      "scene_id": "S_medium_positive_O3_G_o2_G_g3",
+      "realization_id": "M_uo50_sector_0_over",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_020",
+      "scene_id": "S_medium_zero_O2_G_o1_G_g1",
+      "realization_id": "M_uo75_sector_240_left",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_021",
+      "scene_id": "S_near_negative_O1_G_o2_G_g3",
+      "realization_id": "M_uo25_sector_120_left",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_022",
+      "scene_id": "S_medium_positive_O3_G_o3_G_g1",
+      "realization_id": "M_uo25_sector_0_right",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_023",
+      "scene_id": "S_medium_negative_O2_G_o1_G_g2",
+      "realization_id": "M_uo75_sector_120_over",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_024",
+      "scene_id": "S_far_negative_O3_G_o2_G_g1",
+      "realization_id": "M_uo75_sector_240_left",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_025",
+      "scene_id": "S_near_zero_O1_G_o3_G_g2",
+      "realization_id": "M_uo50_sector_0_over",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_026",
+      "scene_id": "S_far_positive_O2_G_o1_G_g3",
+      "realization_id": "M_uo50_sector_120_over",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_027",
+      "scene_id": "S_near_zero_O2_G_o2_G_g1",
+      "realization_id": "M_uo25_sector_240_right",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_028",
+      "scene_id": "S_medium_zero_O3_G_o2_G_g2",
+      "realization_id": "M_uo25_sector_120_over",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_029",
+      "scene_id": "S_near_positive_O1_G_o3_G_g1",
+      "realization_id": "M_uo50_sector_120_left",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_030",
+      "scene_id": "S_far_negative_O3_G_o1_G_g3",
+      "realization_id": "M_uo75_sector_0_right",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_031",
+      "scene_id": "S_medium_positive_O1_G_o2_G_g3",
+      "realization_id": "M_uo75_sector_240_left",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_032",
+      "scene_id": "S_far_zero_O1_G_o1_G_g2",
+      "realization_id": "M_uo50_sector_0_right",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_033",
+      "scene_id": "S_near_negative_O3_G_o1_G_g2",
+      "realization_id": "M_uo25_sector_240_over",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_034",
+      "scene_id": "S_far_zero_O3_G_o3_G_g1",
+      "realization_id": "M_uo75_sector_120_left",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_035",
+      "scene_id": "S_medium_negative_O2_G_o3_G_g1",
+      "realization_id": "M_uo25_sector_0_over",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_036",
+      "scene_id": "S_near_positive_O2_G_o2_G_g3",
+      "realization_id": "M_uo50_sector_240_right",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_037",
+      "scene_id": "S_far_negative_O2_G_o2_G_g3",
+      "realization_id": "M_uo75_sector_0_over",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_038",
+      "scene_id": "S_medium_positive_O3_G_o1_G_g1",
+      "realization_id": "M_uo50_sector_120_right",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_039",
+      "scene_id": "S_medium_negative_O1_G_o3_G_g3",
+      "realization_id": "M_uo50_sector_240_left",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_040",
+      "scene_id": "S_near_positive_O3_G_o2_G_g2",
+      "realization_id": "M_uo25_sector_0_left",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_041",
+      "scene_id": "S_far_zero_O1_G_o3_G_g2",
+      "realization_id": "M_uo75_sector_240_right",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_042",
+      "scene_id": "S_near_zero_O2_G_o1_G_g1",
+      "realization_id": "M_uo75_sector_120_over",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_043",
+      "scene_id": "S_far_positive_O2_G_o1_G_g1",
+      "realization_id": "M_uo25_sector_240_left",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_044",
+      "scene_id": "S_medium_negative_O1_G_o2_G_g2",
+      "realization_id": "M_uo25_sector_120_right",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_045",
+      "scene_id": "S_near_zero_O3_G_o3_G_g3",
+      "realization_id": "M_uo50_sector_0_over",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_046",
+      "scene_id": "S_medium_zero_O2_G_o3_G_g3",
+      "realization_id": "M_uo25_sector_120_left",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_047",
+      "scene_id": "S_far_negative_O1_G_o2_G_g1",
+      "realization_id": "M_uo50_sector_240_over",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_048",
+      "scene_id": "S_near_positive_O2_G_o3_G_g1",
+      "realization_id": "M_uo75_sector_0_right",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_049",
+      "scene_id": "S_medium_positive_O3_G_o1_G_g3",
+      "realization_id": "M_uo75_sector_240_over",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_050",
+      "scene_id": "S_far_zero_O2_G_o2_G_g2",
+      "realization_id": "M_uo50_sector_0_left",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_051",
+      "scene_id": "S_near_negative_O1_G_o1_G_g3",
+      "realization_id": "M_uo75_sector_120_left",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_052",
+      "scene_id": "S_medium_zero_O1_G_o1_G_g1",
+      "realization_id": "M_uo25_sector_0_right",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_053",
+      "scene_id": "S_near_negative_O3_G_o3_G_g2",
+      "realization_id": "M_uo25_sector_240_right",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_054",
+      "scene_id": "S_far_positive_O3_G_o2_G_g2",
+      "realization_id": "M_uo50_sector_120_over",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_055",
+      "scene_id": "S_medium_negative_O2_G_o1_G_g2",
+      "realization_id": "M_uo50_sector_0_right",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_056",
+      "scene_id": "S_far_positive_O1_G_o3_G_g3",
+      "realization_id": "M_uo25_sector_120_over",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_057",
+      "scene_id": "S_near_zero_O3_G_o2_G_g1",
+      "realization_id": "M_uo75_sector_240_left",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_058",
+      "scene_id": "S_near_positive_O1_G_o1_G_g2",
+      "realization_id": "M_uo75_sector_0_over",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_059",
+      "scene_id": "S_medium_negative_O3_G_o3_G_g1",
+      "realization_id": "M_uo50_sector_120_left",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_060",
+      "scene_id": "S_far_zero_O3_G_o1_G_g3",
+      "realization_id": "M_uo25_sector_240_right",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_061",
+      "scene_id": "S_medium_zero_O2_G_o2_G_g2",
+      "realization_id": "M_uo75_sector_120_over",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_062",
+      "scene_id": "S_near_negative_O1_G_o2_G_g3",
+      "realization_id": "M_uo25_sector_0_left",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_063",
+      "scene_id": "S_far_positive_O2_G_o3_G_g1",
+      "realization_id": "M_uo75_sector_240_right",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_064",
+      "scene_id": "S_near_zero_O1_G_o2_G_g1",
+      "realization_id": "M_uo50_sector_120_right",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_065",
+      "scene_id": "S_medium_positive_O1_G_o1_G_g2",
+      "realization_id": "M_uo50_sector_240_left",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_066",
+      "scene_id": "S_far_negative_O2_G_o1_G_g1",
+      "realization_id": "M_uo25_sector_0_over",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_067",
+      "scene_id": "S_far_zero_O3_G_o3_G_g3",
+      "realization_id": "M_uo50_sector_0_left",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_068",
+      "scene_id": "S_near_positive_O2_G_o3_G_g2",
+      "realization_id": "M_uo25_sector_120_right",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_069",
+      "scene_id": "S_medium_negative_O2_G_o2_G_g3",
+      "realization_id": "M_uo75_sector_240_over",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_070",
+      "scene_id": "S_medium_positive_O3_G_o2_G_g1",
+      "realization_id": "M_uo25_sector_0_right",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_071",
+      "scene_id": "S_far_negative_O3_G_o1_G_g2",
+      "realization_id": "M_uo75_sector_120_left",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_072",
+      "scene_id": "S_near_zero_O1_G_o1_G_g3",
+      "realization_id": "M_uo50_sector_240_over",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_073",
+      "scene_id": "S_medium_zero_O1_G_o3_G_g2",
+      "realization_id": "M_uo25_sector_240_over",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_074",
+      "scene_id": "S_near_negative_O2_G_o3_G_g3",
+      "realization_id": "M_uo50_sector_120_right",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_075",
+      "scene_id": "S_far_positive_O1_G_o2_G_g1",
+      "realization_id": "M_uo75_sector_0_left",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_076",
+      "scene_id": "S_medium_positive_O2_G_o1_G_g3",
+      "realization_id": "M_uo25_sector_120_left",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_077",
+      "scene_id": "S_near_negative_O3_G_o3_G_g1",
+      "realization_id": "M_uo75_sector_0_over",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_078",
+      "scene_id": "S_far_negative_O3_G_o2_G_g2",
+      "realization_id": "M_uo50_sector_240_right",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "negative",
+        "orientation_deg": -30,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo50",
+        "u_o": 0.5,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_079",
+      "scene_id": "S_medium_zero_O3_G_o1_G_g3",
+      "realization_id": "M_uo75_sector_0_right",
+      "scene": {
+        "distance_level": "medium",
+        "distance_m": 0.36,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O3",
+        "source_geometry_id": "G_o1",
+        "target_geometry_id": "G_g3"
+      },
+      "realization": {
+        "u_o_level": "uo75",
+        "u_o": 0.75,
+        "u_g_level": "sector_0",
+        "u_g": 0,
+        "topology_class": "c_right",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_080",
+      "scene_id": "S_far_zero_O1_G_o2_G_g1",
+      "realization_id": "M_uo25_sector_120_over",
+      "scene": {
+        "distance_level": "far",
+        "distance_m": 0.42,
+        "orientation_level": "zero",
+        "orientation_deg": 0,
+        "obstacle_layout_id": "O1",
+        "source_geometry_id": "G_o2",
+        "target_geometry_id": "G_g1"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_120",
+        "u_g": 0.3333333333333333,
+        "topology_class": "c_over",
+        "anchor_height_m": 0.08
+      },
+      "status": "collect"
+    },
+    {
+      "collection_row_id": "PB_081",
+      "scene_id": "S_near_positive_O2_G_o3_G_g2",
+      "realization_id": "M_uo25_sector_240_left",
+      "scene": {
+        "distance_level": "near",
+        "distance_m": 0.3,
+        "orientation_level": "positive",
+        "orientation_deg": 30,
+        "obstacle_layout_id": "O2",
+        "source_geometry_id": "G_o3",
+        "target_geometry_id": "G_g2"
+      },
+      "realization": {
+        "u_o_level": "uo25",
+        "u_o": 0.25,
+        "u_g_level": "sector_240",
+        "u_g": 0.6666666666666666,
+        "topology_class": "c_left",
+        "anchor_height_m": 0.07
+      },
+      "status": "collect"
+    }
+  ]
+}

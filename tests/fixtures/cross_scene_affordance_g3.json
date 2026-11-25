@@ -1,0 +1,76 @@
+{
+  "schema": "verified_affordance_cache_v1",
+  "geometry_id": "G3_deep_vertical",
+  "source_method": "openad_candidate_domain_plus_geometry_parameterization",
+  "source": {
+    "region_id": "pour_outlet",
+    "parameterization": "normalized_preferred_pour_arc",
+    "rim_center_local_m": [
+      -0.018,
+      -0.003,
+      0.0
+    ],
+    "rim_radius_m": 0.038,
+    "lip_z_m": 0.131,
+    "handle_center_deg_local": 0.0,
+    "pour_arc_center_deg_local": 180.0,
+    "pour_arc_span_deg": 120.0,
+    "handle_exclusion_half_width_deg": 60.0,
+    "allowed_intervals_u": [
+      [
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "target": {
+    "region_id": "receive_liquid",
+    "parameterization": "normalized_opening_polar",
+    "safe_opening_radius_m": 0.036,
+    "opening_z_task_m": 0.0583,
+    "receive_floor_z_task_m": 0.0275,
+    "angle_offset_deg": 0.0,
+    "default_radial_u": 0.6
+  },
+  "review": {
+    "openad_run": true,
+    "geometry_gate_passed": true,
+    "human_verified": true,
+    "verified_at": "2026-08-23",
+    "verification_scope": "parameterized operator-guidance region; not a claim of raw OpenAD pointwise accuracy"
+  },
+  "openad": {
+    "vocabulary": [
+      "grasp",
+      "contain",
+      "lift",
+      "openable",
+      "layable",
+      "sittable",
+      "support",
+      "wrap_grasp",
+      "pourable",
+      "move",
+      "displaY",
+      "pushable",
+      "pull",
+      "listen",
+      "wear",
+      "press",
+      "cut",
+      "stab",
+      "none"
+    ],
+    "source_query": "pourable",
+    "target_query": "contain",
+    "selection": {
+      "criterion": "top1_and_min_probability",
+      "min_probability": 0.7
+    },
+    "yaw_ensemble_steps": 1,
+    "coverage_sampling": {
+      "source": "response_weighted_spatial_coverage",
+      "target": "response_weighted_spatial_coverage"
+    }
+  }
+}

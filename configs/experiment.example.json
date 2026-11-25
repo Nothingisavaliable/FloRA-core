@@ -1,0 +1,17 @@
+{
+  "name": "global-local-smoke",
+  "seed": 7301,
+  "output_dir": "../outputs/global-local-smoke",
+  "model": {
+    "architecture": "global_local",
+    "checkpoint": null
+  },
+  "data": {
+    "demonstration_roots": ["../data/demonstrations"]
+  },
+  "environment": {
+    "backend": "mujoco",
+    "robot": null,
+    "task": "pouring"
+  }
+}
